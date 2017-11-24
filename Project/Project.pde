@@ -7,19 +7,19 @@ void setup()
   //Uses full width and height of screen
   fullScreen();
   background(0);
-  
   radar = new radar(1800,950, 100, 0.5, color(255,0,0));
 }
 
 void draw()
 {
   //Makes the stars fade out
+  noStroke();
   fill(0,10);
   rect(0,0,1917,700);
+  
   //Generates the stars in random positions
   fill(255);
   ellipse(random(width), random(height), 6,6);
-  
   
   //Makes the cursor a cross
   noCursor();
@@ -43,9 +43,9 @@ void draw()
     }
   //Creates the control panel
   fill(col);
-  rect(0,700,1918,385,7);
+  rect(0,700,1920,385,7);
   
-  //Colour selection box
+  //Colour selection 
   rect(0,950,150,128,7);
  
   //Creates text
@@ -61,9 +61,7 @@ void draw()
   rect(50,950,50,128);
   fill(0,0,205);
   rect(100,950,50,128,0,7,7,0);
-  noStroke();
-  
-  
+
   radar.render();
   radar.update();
     
