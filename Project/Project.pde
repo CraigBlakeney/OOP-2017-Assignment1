@@ -15,7 +15,7 @@ void draw()
   //Makes the stars fade out
   noStroke();
   fill(0,10);
-  rect(0,0,1917,700);
+  rect(0,0,1920 ,700);
   
   //Generates the stars in random positions
   fill(255);
