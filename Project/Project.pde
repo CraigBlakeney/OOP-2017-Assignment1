@@ -2,6 +2,7 @@ color col = 0;
 int i;
 Panel panel;
 radar radar;
+Colour_Selector colour_selector;
 
 void setup()
 {
@@ -12,6 +13,7 @@ void setup()
   radar = new radar(1800,950, 100, 0.5, color(255,0,0));
   loadPlanets();
   panel = new Panel();
+  colour_selector = new Colour_Selector();
 }
 
 void loadPlanets()
