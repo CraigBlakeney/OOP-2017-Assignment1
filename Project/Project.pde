@@ -2,6 +2,8 @@ color col = 0;
 int i;
 Panel panel;
 radar radar;
+Star star;
+
 //Colour_Selector colour_selector;
 
 void setup()
@@ -13,6 +15,7 @@ void setup()
   radar = new radar(1800,950, 100, 0.5, color(255,0,0));
   loadPlanets();
   panel = new Panel();
+  star = new Star();
   //colour_selector = new Colour_Selector();
 }
 
@@ -32,17 +35,7 @@ ArrayList<Planet> planets = new ArrayList<Planet>();
 
 void draw()
 { 
-  
-  //Makes the stars fade out 
-  noStroke();
-  fill(0,12);
-  rect(0,0,1920,700);
-  //Generates the stars in random positions
-  fill(255);
-  ellipse(random(width), random(height), 6,6);
-  
   //Makes the cursor a cross
-  
   noCursor();
   cursor(CROSS);
     
@@ -62,8 +55,9 @@ void draw()
           col = color(0,0,205);
         }
     }
-  
+  star.display();
   panel.display();
+  
   //colour_selector.display();
   
   for(Planet planet : planets)
