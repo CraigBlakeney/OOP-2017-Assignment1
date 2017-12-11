@@ -2,14 +2,18 @@ class Planet
 {
   float xPos;
   float yPos;
-  float col;
+  float rCol;
+  float gCol;
+  float bCol;
   float diameter;
   
   Planet(TableRow row)
   {
     xPos = row.getFloat("xPos");
     yPos = row.getFloat("yPos");
-    col = row.getFloat("col");
+    rCol = row.getFloat("rCol");
+    gCol = row.getFloat("gCol");
+    bCol = row.getFloat("bCol");
     diameter = row.getFloat("diameter");
   }
   
@@ -20,7 +24,7 @@ class Planet
     for(counter=0 ; counter < 7 ; counter++)
     {
       stroke(255);
-      fill(col);
+      fill(rCol, gCol, bCol);
       ellipse(xPos,yPos,diameter,diameter);
     }
   }
