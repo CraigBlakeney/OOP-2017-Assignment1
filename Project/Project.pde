@@ -2,7 +2,7 @@ color col = 0;
 int i;
 Panel panel;
 radar radar;
-Colour_Selector colour_selector;
+//Colour_Selector colour_selector;
 
 void setup()
 {
@@ -13,7 +13,7 @@ void setup()
   radar = new radar(1800,950, 100, 0.5, color(255,0,0));
   loadPlanets();
   panel = new Panel();
-  colour_selector = new Colour_Selector();
+  //colour_selector = new Colour_Selector();
 }
 
 void loadPlanets()
@@ -47,7 +47,7 @@ void draw()
   cursor(CROSS);
     
   // When the mouse is clicked on a colour the control panel changes to that colour
-  /*if(mousePressed)
+  if(mousePressed)
     {
         if(mouseX > 0 && mouseX < 50 && mouseY > 950 && mouseY < 1080)
         {
@@ -62,9 +62,9 @@ void draw()
           col = color(0,0,205);
         }
     }
-  */
+  
   panel.display();
-  colour_selector.display();
+  //colour_selector.display();
   
   for(Planet planet : planets)
   {
