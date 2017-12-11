@@ -1,4 +1,5 @@
 color col = 0;
+int i;
 
 radar radar;
 
@@ -8,20 +9,36 @@ void setup()
   fullScreen();
   background(0);
   radar = new radar(1800,950, 100, 0.5, color(255,0,0));
+  loadPlanets();
 }
 
-void draw()
+void loadPlanets()
 {
-  //Makes the stars fade out
-  noStroke();
-  fill(0,10);
-  rect(0,0,1920 ,700);
+  Table table = loadTable("planets.csv", "header");
   
+  for(TableRow row : table.rows())
+  {
+    Planet planet = new Planet(row);
+    planets.add(planet);
+  }
+}
+
+ArrayList<Planet> planets = new ArrayList<Planet>();
+  
+
+void draw()
+{ 
+  
+  //Makes the stars fade out 
+  noStroke();
+  fill(0,12);
+  rect(0,0,1920,700);
   //Generates the stars in random positions
   fill(255);
   ellipse(random(width), random(height), 6,6);
   
   //Makes the cursor a cross
+  
   noCursor();
   cursor(CROSS);
     
@@ -61,8 +78,15 @@ void draw()
   rect(50,950,50,128);
   fill(0,0,205);
   rect(100,950,50,128,0,7,7,0);
+  
+  for(Planet planet : planets)
+  {
+    planet.display();
+  }
 
   radar.render();
   radar.update();
+ 
+ 
     
 }
