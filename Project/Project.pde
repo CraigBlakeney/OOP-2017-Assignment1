@@ -38,23 +38,7 @@ void draw()
   //Makes the cursor a cross
   noCursor();
   cursor(CROSS);
-    
-  // When the mouse is clicked on a colour the control panel changes to that colour
-  if(mousePressed)
-    {
-        if(mouseX > 0 && mouseX < 50 && mouseY > 950 && mouseY < 1080)
-        {
-          col = color(255);
-        }
-        else if(mouseX > 50 && mouseX < 100 && mouseY > 950 && mouseY < 1080)
-        {
-          col = color(0);
-        }
-        else if(mouseX > 100 && mouseX < 150 && mouseY > 950 && mouseY < 1080)
-        {
-          col = color(0,0,205);
-        }
-    }
+  
   star.display();
   panel.display();
   
