@@ -47,7 +47,7 @@ void draw()
   cursor(CROSS);
     
   // When the mouse is clicked on a colour the control panel changes to that colour
-  if(mousePressed)
+  /*if(mousePressed)
     {
         if(mouseX > 0 && mouseX < 50 && mouseY > 950 && mouseY < 1080)
         {
@@ -62,8 +62,9 @@ void draw()
           col = color(0,0,205);
         }
     }
-  
+  */
   panel.display();
+  colour_selector.display();
   
   for(Planet planet : planets)
   {
