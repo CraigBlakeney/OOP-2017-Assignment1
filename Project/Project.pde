@@ -4,6 +4,7 @@ Panel panel;
 radar radar;
 Star[] stars = new Star[150];
 Data data;
+Radarp radarp;
 
 
 void setup()
@@ -15,8 +16,8 @@ void setup()
   radar = new radar(1800,950, 100, 0.5, color(255,0,0));
   loadPlanets();
   panel = new Panel();
-  //star = new Star();
   data = new Data();
+  radarp = new Radarp();
   
   for(int i = 0; i < stars.length; i++)
   {
@@ -58,6 +59,7 @@ void draw()
 
   radar.render();
   radar.update();
+  radarp.display();
   data.display();
   
 }
