@@ -22,6 +22,17 @@ class Data
         text("6792km", 325,1030);
       }
       
+      if(mouseX > 555 && mouseX < 645 && mouseY > 255 && mouseY < 345)
+      {
+        fill(255,0,0);
+        textSize(13);
+        text("Neptune", 300, 970);
+        text("14", 335, 1000);
+        text("49528km", 325, 1030);
+      }
+      
+      
+      
     
     
   }
