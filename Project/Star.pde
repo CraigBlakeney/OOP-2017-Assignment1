@@ -8,6 +8,5 @@ class Star
   noStroke();
   fill(255);
   ellipse(x,y,6,6);
-  
  }
 }
