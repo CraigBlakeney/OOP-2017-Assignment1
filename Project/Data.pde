@@ -4,7 +4,7 @@ class Data
   void display()
   {
     fill(255);
-    rect(200,950,300,128);
+    rect(200,950,300,128,7);
     textSize(13);
     fill(99,211,145);
     text("Hover over Planet to find out info.", 225, 945);
