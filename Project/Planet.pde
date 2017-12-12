@@ -7,6 +7,7 @@ class Planet
   float bCol;
   float diameter;
   
+  //Gets the data from the CSV file
   Planet(TableRow row)
   {
     xPos = row.getFloat("xPos");
@@ -21,6 +22,7 @@ class Planet
   {
     float counter;
     
+    //Prints each planet with the corresponding data from the CSV file
     for(counter=0 ; counter < 7 ; counter++)
     {
       stroke(255);

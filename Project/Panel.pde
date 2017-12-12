@@ -2,6 +2,7 @@ class Panel
 {
   void display()
   {
+    //Draws the control panel
     noStroke();
     fill(col);
     rect(0,700,1920,385,7);
@@ -23,6 +24,7 @@ class Panel
     fill(0,0,205);
     rect(100,950,50,128,0,7,7,0);
     
+    //Checks if the mouse has has been pressed and changes the control panel to the corresponding colour.
     if(mousePressed)
     {
         if(mouseX > 0 && mouseX < 50 && mouseY > 950 && mouseY < 1080)

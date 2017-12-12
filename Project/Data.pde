@@ -3,6 +3,7 @@ class Data
   
   void display()
   {
+    //Draws the data box and text 
     fill(255);
     rect(200,950,300,128,7);
     textSize(13);
@@ -13,6 +14,8 @@ class Data
     text("Amount of Moons:",215,1000);
     text("Planet Diameter:", 215, 1030);
 
+    //Checks if the mouse is inside each planet and prints out the corresponding information
+    
       if(mouseX > 275 && mouseX < 325 && mouseY > 75 && mouseY < 125)
       {
         fill(255,0,0);

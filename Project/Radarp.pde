@@ -2,6 +2,7 @@ class Radarp
 {
  void display()
  {
+   //Draws the planets on the radar
     noStroke();
     fill(255,0,0);
     ellipse(1750, 905, 7, 7);
