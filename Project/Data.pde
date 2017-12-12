@@ -35,6 +35,20 @@ class Data
         text("1", 335, 1000);
         text("12756km", 325, 1030);
       }
+      
+      if(mouseX > 1175 && mouseX < 1225 && mouseY > 475 && mouseY < 525)
+      {
+        text("Venus", 300, 970);
+        text("None", 335, 1000);
+        text("12104km", 325, 1030);
+      }
+      
+      if(mouseX > 1445 && mouseX < 1555 && mouseY > 570 && mouseY < 680)
+      {
+        text("Saturn", 300, 970);
+        text("62", 335, 1000);
+        text("120536km", 325, 1030);
+      }
     
     
   }
