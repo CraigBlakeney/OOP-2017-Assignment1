@@ -24,15 +24,17 @@ class Data
       
       if(mouseX > 555 && mouseX < 645 && mouseY > 255 && mouseY < 345)
       {
-        fill(255,0,0);
-        textSize(13);
         text("Neptune", 300, 970);
         text("14", 335, 1000);
         text("49528km", 325, 1030);
       }
       
-      
-      
+      if(mouseX > 865 && mouseX < 935 && mouseY > 165 && mouseY < 235)
+      {
+        text("Earth", 300, 970);
+        text("1", 335, 1000);
+        text("12756km", 325, 1030);
+      }
     
     
   }
