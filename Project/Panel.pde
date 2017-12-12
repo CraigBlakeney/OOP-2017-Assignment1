@@ -2,6 +2,7 @@ class Panel
 {
   void display()
   {
+    noStroke();
     fill(col);
     rect(0,700,1920,385,7);
     

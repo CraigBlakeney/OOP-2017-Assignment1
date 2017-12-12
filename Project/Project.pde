@@ -2,8 +2,9 @@ color col = 0;
 int i;
 Panel panel;
 radar radar;
-Star star;
+Star[] stars = new Star[150];
 Data data;
+
 
 void setup()
 {
@@ -14,8 +15,13 @@ void setup()
   radar = new radar(1800,950, 100, 0.5, color(255,0,0));
   loadPlanets();
   panel = new Panel();
-  star = new Star();
+  //star = new Star();
   data = new Data();
+  
+  for(int i = 0; i < stars.length; i++)
+  {
+    stars[i] = new Star();
+  }
 }
 
 void loadPlanets()
@@ -38,9 +44,13 @@ void draw()
   noCursor();
   cursor(CROSS);
   
-  star.display();
   panel.display();
   
+   for(int i = 0; i < stars.length; i++)
+  {
+    stars[i].display();
+  }
+ 
   for(Planet planet : planets)
   {
     planet.display();
@@ -49,7 +59,5 @@ void draw()
   radar.render();
   radar.update();
   data.display();
- 
- 
-    
+  
 }
