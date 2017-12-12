@@ -23,12 +23,12 @@ class Planet
     float counter;
     
     //Prints each planet with the corresponding data from the CSV file
-    for(counter=0 ; counter < 7 ; counter++)
-    {
-      stroke(255);
-      fill(rCol, gCol, bCol);
-      ellipse(xPos,yPos,diameter,diameter);
-    }
+      for(counter=0 ; counter < 7 ; counter++)
+      {
+        stroke(255);
+        fill(rCol, gCol, bCol);
+        ellipse(xPos,yPos,diameter,diameter);
+      }
   }
   
 }

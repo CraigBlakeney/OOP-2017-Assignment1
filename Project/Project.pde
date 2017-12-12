@@ -18,10 +18,11 @@ void setup()
   panel = new Panel();
   data = new Data();
   radarp = new Radarp();
-  for(int i = 0; i < stars.length; i++)
-  {
-    stars[i] = new Star();
-  }
+  
+    for(int i = 0; i < stars.length; i++)
+    {
+      stars[i] = new Star();
+    }
   
 }
 
@@ -30,11 +31,11 @@ void loadPlanets()
 {
   Table table = loadTable("planets.csv", "header");
   
-  for(TableRow row : table.rows())
-  {
-    Planet planet = new Planet(row);
-    planets.add(planet);
-  }
+    for(TableRow row : table.rows())
+    {
+      Planet planet = new Planet(row);
+      planets.add(planet);
+    }
 }
 
 //Creates an arraylist of the planets
@@ -48,16 +49,16 @@ void draw()
   cursor(CROSS);
  
   //Displays the stars
-   for(int i = 0; i < stars.length; i++)
-  {
-    stars[i].display();
-  }
+     for(int i = 0; i < stars.length; i++)
+    {
+      stars[i].display();
+    }
  
  //Displays the planets 
-  for(Planet planet : planets)
-  {
-    planet.display();
-  }
+    for(Planet planet : planets)
+    {
+      planet.display();
+    }
   
   //Calling the classes 
   panel.display();
