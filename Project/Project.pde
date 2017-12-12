@@ -3,8 +3,7 @@ int i;
 Panel panel;
 radar radar;
 Star star;
-
-//Colour_Selector colour_selector;
+Data data;
 
 void setup()
 {
@@ -16,7 +15,7 @@ void setup()
   loadPlanets();
   panel = new Panel();
   star = new Star();
-  //colour_selector = new Colour_Selector();
+  data = new Data();
 }
 
 void loadPlanets()
@@ -42,8 +41,6 @@ void draw()
   star.display();
   panel.display();
   
-  //colour_selector.display();
-  
   for(Planet planet : planets)
   {
     planet.display();
@@ -51,6 +48,7 @@ void draw()
 
   radar.render();
   radar.update();
+  data.display();
  
  
     
